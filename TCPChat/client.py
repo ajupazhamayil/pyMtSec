@@ -16,7 +16,7 @@ def receive(s, addr, stop_event):
     except Exception:
       pass
     if(message):
-      print(str(addr)+" > "+str(message.decode()))
+      print("partner"+" > "+str(message.decode()))
 
 def send(s, addr, stop_event):
   while(True and not stopEvent.is_set()):
