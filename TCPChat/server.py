@@ -3,6 +3,7 @@ import threading
 import time
 
 host = "localhost"
+# Ports for client and server
 cport = 5454
 sport = 5455
 
@@ -26,6 +27,7 @@ def send(s, addr, stop_event):
       stop_event.set()
     print(" > "+message)
 
+# Create socket for the server, bind it to the port, listen to incoming connections and create threads for sender and receiver.
 if __name__=="__main__":
   s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
   s.bind((host, sport))
